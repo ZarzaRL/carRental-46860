@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.grid-container {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-rows: 20% auto 10%;
+  grid-template-areas:
+    "head head head"
+    "main main main"
+    "foot foot foot";
+}
+/*header*/
+.base {
+  grid-area: main;
+  background-color: #282a3a;
+}
+
+.head {
+  background-image: url(../assets/img/head.jpg);
+  background-size: cover;
+  background-position: 50% 54%;
+  grid-area: head;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  font-family: "Roboto Mono", monospace;
+}
+
+.head a {
+  color: #c69749;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+/*footer*/
+.pie {
+  grid-area: foot;
+  display: flex;
+
+  background-color: #0a0e0f;
+  color: white;
+  text-align: center;
+  justify-content: space-between;
+  padding: 0 1.5rem 0 1.5rem;
+  align-items: center;
+  font-size: 1.25rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+.pie a {
+  text-decoration: none;
+  color: white;
+}
+
+/*index*/
+.section-principal {
+  text-align: center;
+  color: #c69749;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.section-principal h1 {
+  margin: 1rem;
+  font-size: 10rem;
+  font-style: italic;
+}
+
+.section-principal p {
+  font-size: 5rem;
+}
+
+.section-about {
+  margin-top: 6.25rem;
+  text-align: center;
+  color: #c69749;
+}
+
+.section-about h2 {
+  font-size: 5rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.section-about p {
+  margin: 2rem;
+  font-size: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.section-about a {
+  color: #c69749;
+  text-decoration: none;
+  margin: 2rem;
+  font-size: 1.5rem;
+}
+
+/*form*/
+
+.formulario {
+  background-color: black;
+  margin: 5rem;
+  padding: 2rem;
+}
+.formulario input {
+  margin-bottom: 1rem;
+}
+.formulario label {
+  font-size: 1.2rem;
+  color: #c69749;
+  font-family: "Josefin Sans", sans-serif;
+}
+.formulario button {
+  margin-top: 1rem;
+  background-color: #c69749;
+  color: black;
+  border-radius: 0.3125rem;
+  border-color: black;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 0.125rem 0.125rem 0.125rem 0.125rem;
+}
+
+/*fleet*/
+.section-fleet {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.section-fleet div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-fleet img {
+  width: 75%;
+  box-shadow: 1px 1px 1.875rem rgba(0, 0, 0, 0.685);
+}
+
+.section-fleet a {
+  text-decoration: none;
+  color: #c69749;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.875rem;
+}
+
+/*car page*/
+.main-car {
+  display: flex;
+  justify-content: center;
+}
+
+.section-car {
+  display: flex;
+  margin: 1.25rem 0 1.25rem 0;
+  flex-direction: column;
+  font-family: "Josefin Sans", sans-serif;
+  color: #c69749;
+  width: 75%;
+}
+
+.section-car h1 {
+  font-size: 4.375rem;
+
+  color: #c69749;
+  text-align: center;
+}
+
+.section-car img {
+  width: 100%;
+  padding: 1.25rem 0 1.25rem 0;
+}
+
+.section-car h2 {
+  text-align: left;
+  font-size: 3.125rem;
+}
+
+.section-car p {
+  font-size: 1.25rem;
+}
+
+/*faqs*/
+.main-faqs {
+  display: flex;
+  justify-content: center;
+}
+
+.section-faqs {
+  display: flex;
+  flex-direction: column;
+  font-family: "Josefin Sans", sans-serif;
+  justify-content: center;
+  width: 80%;
+}
+
+.section-faqs h1 {
+  font-size: 4.375rem;
+  text-align: center;
+  color: #c69749;
+  margin: 15px 0 0 0;
+}
+
+.question {
+  background-color: #735f32;
+  height: 4.6875rem;
+  border: solid black;
+  display: flex;
+  align-items: center;
+}
+
+.question p {
+  margin: 0 0 0 0.3125rem;
+}
+
+.answer {
+  background-color: #c69749;
+  border: solid black;
+  height: 200px;
+  display: flex;
+}
+
+.answer p {
+  margin: 0.3125rem 0 0 0.3125rem;
+}
+
+
+
+
+/*queries*/
+
+@media  (max-width: 768px) {
+    .grid-container {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-rows: 10% auto 5%;
+        grid-template-areas:
+          "head head"
+          "main main"
+          "foot foot";
+      }
+    /*header*/
+    .head a {
+        color: #c69749;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+    /*fleet*/
+    .section-fleet{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .section-fleet a {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .grid-container {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-rows: 10% auto 5%;
+        grid-template-areas:
+          "head"
+          "main"
+          "foot";
+      }
+    /*header*/
+    .head {
+        background-image: url(../assets/img/head.jpg);
+        background-size: cover;
+        background-position: 0% 54%;
+        grid-area: head;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        font-family: "Roboto Mono", monospace;
+    }
+    /*fleet*/
+    .section-fleet{
+        grid-template-columns: 1fr;
+        grid-column-start: 2;
+    }
+    .section-fleet a {
+        font-size: 1.2rem;
+    }
+}
