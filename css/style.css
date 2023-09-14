@@ -41,7 +41,6 @@
 .pie {
   grid-area: foot;
   display: flex;
-
   background-color: #0a0e0f;
   color: white;
   text-align: center;
@@ -99,11 +98,16 @@
 }
 
 /*form*/
-
+.form-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 .formulario {
+  grid-column-start: 2;
   background-color: black;
   margin: 5rem;
   padding: 2rem;
+  height: 31.25rem;
 }
 .formulario input {
   margin-bottom: 1rem;
@@ -229,66 +233,79 @@
   margin: 0.3125rem 0 0 0.3125rem;
 }
 
+/*pseudoclases*/
 
-
+/*head*/
+.head li a:hover {
+  background-color: black;
+  margin: 1rem;
+}
+.section-fleet img:hover {
+  width: 75%;
+  box-shadow: 0.3125rem 0.3125rem 2.5rem black;
+}
+/*foot*/
+.pie a:last-child:hover {
+  background-color: black;
+}
 
 /*queries*/
 
-@media  (max-width: 768px) {
-    .grid-container {
-        display: grid;
-        width: 100%;
-        height: 100vh;
-        grid-template-rows: 10% auto 5%;
-        grid-template-areas:
-          "head head"
-          "main main"
-          "foot foot";
-      }
-    /*header*/
-    .head a {
-        color: #c69749;
-        text-decoration: none;
-        font-size: 1rem;
-    }
-    /*fleet*/
-    .section-fleet{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .section-fleet a {
-        font-size: 1.5rem;
-    }
+@media (max-width: 768px) {
+  .grid-container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 10% auto 5%;
+    grid-template-areas:
+      "head head"
+      "main main"
+      "foot foot";
+  }
+  /*header*/
+  .head a {
+    color: #c69749;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  /*fleet*/
+  .section-fleet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .section-fleet a {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 425px) {
-    .grid-container {
-        display: grid;
-        width: 100%;
-        height: 100vh;
-        grid-template-rows: 10% auto 5%;
-        grid-template-areas:
-          "head"
-          "main"
-          "foot";
-      }
-    /*header*/
-    .head {
-        background-image: url(../assets/img/head.jpg);
-        background-size: cover;
-        background-position: 0% 54%;
-        grid-area: head;
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        justify-content: center;
-        font-family: "Roboto Mono", monospace;
-    }
-    /*fleet*/
-    .section-fleet{
-        grid-template-columns: 1fr;
-        grid-column-start: 2;
-    }
-    .section-fleet a {
-        font-size: 1.2rem;
-    }
+  .grid-container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 10% auto 5%;
+    grid-template-areas:
+      "head"
+      "main"
+      "foot";
+  }
+  /*header*/
+  .head {
+    background-image: url(../assets/img/head.jpg);
+    background-size: cover;
+    background-position: 0% 54%;
+    grid-area: head;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    font-family: "Roboto Mono", monospace;
+  }
+  /*fleet*/
+  .section-fleet {
+    grid-template-columns: 1fr;
+    grid-column-start: 2;
+  }
+  .section-fleet a {
+    font-size: 1.2rem;
+  }
 }
