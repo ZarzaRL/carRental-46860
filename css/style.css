@@ -100,17 +100,24 @@
 /*form*/
 .form-box {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1% auto 1%;
+  grid-column-start: 2;
+  
 }
 .formulario {
   grid-column-start: 2;
   background-color: black;
-  margin: 5rem;
-  padding: 2rem;
-  height: 31.25rem;
+  margin-top: 1.25rem;
+  height: 23.75rem;
+  width: 100%;
+  padding: 1rem;
 }
 .formulario input {
   margin-bottom: 1rem;
+  width: 100%;
+}
+.formulario textarea {
+  width: 100%;
 }
 .formulario label {
   font-size: 1.2rem;
@@ -233,6 +240,16 @@
   margin: 0.3125rem 0 0 0.3125rem;
 }
 
+
+
+
+
+
+
+
+
+
+
 /*pseudoclases*/
 
 /*head*/
@@ -248,6 +265,18 @@
 .pie a:last-child:hover {
   background-color: black;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*queries*/
 
@@ -271,9 +300,19 @@
   /*fleet*/
   .section-fleet {
     grid-template-columns: repeat(2, 1fr);
+    grid-column-start: 1;
+    grid-column-end: 2;
   }
   .section-fleet a {
     font-size: 1.5rem;
+  }
+  /*form*/
+  .form-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 0 1.25rem 0 1.25rem;
   }
 }
 
@@ -307,5 +346,10 @@
   }
   .section-fleet a {
     font-size: 1.2rem;
+  }
+  /*form*/
+  .form-box {
+    grid-template-columns: 1fr;
+    grid-column-end: 1;
   }
 }
