@@ -349,7 +349,13 @@
     grid-column-end: 3;
     padding: 0 1.25rem 0 1.25rem;
   }
-  
+  /*car*/
+  .section-car h1 {
+    font-size: 3.5rem;
+  }
+  .section-car h2 {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 425px) {
@@ -387,5 +393,12 @@
   .form-box {
     grid-template-columns: 1fr;
     grid-column-end: 1;
+  }
+  /*car*/
+  .section-car h1 {
+    font-size: 2.5rem;
+  }
+  .section-car h2 {
+    font-size: 2rem;
   }
 }
