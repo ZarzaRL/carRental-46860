@@ -122,42 +122,7 @@
   font-size: 1.5rem;
 }
 
-/*form*/
-.form-box {
-  display: grid;
-  grid-template-columns: 1% auto 1%;
-  grid-column-start: 2;
-  
-}
-.formulario {
-  grid-column-start: 2;
-  background-color: black;
-  margin-top: 1.25rem;
-  height: 23.75rem;
-  width: 100%;
-  padding: 1rem;
-}
-.formulario input {
-  margin-bottom: 1rem;
-  width: 100%;
-}
-.formulario textarea {
-  width: 100%;
-}
-.formulario label {
-  font-size: 1.2rem;
-  color: #c69749;
-  font-family: "Josefin Sans", sans-serif;
-}
-.formulario button {
-  margin-top: 1rem;
-  background-color: #c69749;
-  color: black;
-  border-radius: 0.3125rem;
-  border-color: black;
-  font-family: "Josefin Sans", sans-serif;
-  padding: 0.125rem 0.125rem 0.125rem 0.125rem;
-}
+
 
 /*fleet*/
 .section-fleet {
@@ -184,6 +149,7 @@
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.875rem;
 }
+
 
 /*car page*/
 .main-car {
@@ -221,18 +187,55 @@
   font-size: 1.25rem;
 }
 
+/*form*/
+.form-box {
+  display: grid;
+  grid-template-columns: 1% auto 1%;
+  grid-column-start: 2;
+  
+}
+.formulario {
+  grid-column-start: 2;
+  background-color: black;
+  margin-top: 1.25rem;
+  height: 23.75rem;
+  width: 100%;
+  padding: 1rem;
+}
+.formulario input {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.formulario textarea {
+  width: 100%;
+}
+.formulario label {
+  font-size: 1.2rem;
+  color: #c69749;
+  font-family: "Josefin Sans", sans-serif;
+}
+.formulario button {
+  margin-top: 1rem;
+  background-color: #c69749;
+  color: black;
+  border-radius: 0.3125rem;
+  border-color: black;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 0.125rem 0.125rem 0.125rem 0.125rem;
+}
 /*faqs*/
 .main-faqs {
-  display: flex;
-  justify-content: center;
+grid-column-start: 1;
+grid-column-end: 4;
+margin: 1.25rem;
 }
 
 .section-faqs {
+
   display: flex;
   flex-direction: column;
   font-family: "Josefin Sans", sans-serif;
-  justify-content: center;
-  width: 80%;
+
 }
 
 .section-faqs h1 {
@@ -240,14 +243,48 @@
   text-align: center;
   color: #c69749;
   margin: 15px 0 0 0;
+  grid-column-start: 2;
+}
+.accordion-body{
+  background-color: #c69749;
+  max-width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  border: solid black;
+  color: black;
+}
+.accordion-button{
+  background-color: #735f32;
+  border:solid black;
+  font-family: "Josefin Sans", sans-serif;
+  color: black;
+}
+.accordion-button:not(.collapsed){
+  background-color: #735f32;
+  border:solid black;
+  font-family: "Josefin Sans", sans-serif;
+  color: black;
+}
+.accordion-button::after{
+  background-image: url(../assets/img/mas.png);
+}
+.accordion-button:not(.collapsed):after{
+  background-image: url(../assets/img/menos.png);
+}
+.accordion-item{
+  background-color: #282a3a;
 }
 
-.question {
+
+
+/*
+.question{
+  background-color: black;
+}
+.question button{
   background-color: #735f32;
   height: 4.6875rem;
   border: solid black;
-  display: flex;
-  align-items: center;
+  
 }
 
 .question p {
@@ -257,15 +294,17 @@
 .answer {
   background-color: #c69749;
   border: solid black;
-  height: 200px;
-  display: flex;
+  
 }
 
 .answer p {
   margin: 0.3125rem 0 0 0.3125rem;
 }
+.acordion-item{
+  background-color: #c69749;
+}
 
-
+*/
 
 
 
@@ -349,6 +388,12 @@
     grid-column-end: 3;
     padding: 0 1.25rem 0 1.25rem;
   }
+  /*faqs*/
+  .main-faqs {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    }
   /*car*/
   .section-car h1 {
     font-size: 3.5rem;
@@ -401,4 +446,9 @@
   .section-car h2 {
     font-size: 2rem;
   }
+  /*faqs*/
+  .main-faqs {
+    grid-column-end: 1;
+
+    }
 }
