@@ -1,0 +1,22 @@
+.pie {
+    grid-area: foot;
+    display: flex;
+    background-color: #0a0e0f;
+    color: white;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0 1.5rem 0 1.5rem;
+    align-items: center;
+    font-size: 1.25rem;
+    font-family: "Roboto Mono", monospace;
+    a{
+        text-decoration: none;
+        color: white;
+        &:last-child:hover{
+            background-color: black;
+        }
+        p{
+            margin: 0;
+        }
+    }    
+}

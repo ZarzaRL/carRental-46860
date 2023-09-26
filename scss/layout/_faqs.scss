@@ -1,0 +1,46 @@
+.main-faqs{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin: 1.25rem;
+    .section-faqs{
+        display: flex;
+        flex-direction: column;
+        font-family: "Josefin Sans", sans-serif;
+        h1{
+            font-size: 4.375rem;
+            text-align: center;
+            color: #c69749;
+            margin: 15px 0 0 0;
+            grid-column-start: 2;    
+        }
+        .accordion-item{
+            background-color: #282a3a;
+            .accordion-body{
+                background-color: #c69749;
+                max-width: 100%;
+                font-family: $font-general;
+                border: solid black;
+                color: black;
+            }
+            .accordion-button{
+                background-color: #735f32;
+                border:solid black;
+                font-family: $font-general;
+                color: black;
+                &:not(.collapsed){
+                    background-color: #735f32;
+                    border:solid black;
+                    font-family: $font-general;
+                    color: black;
+                }
+                &::after{
+                    background-image: url(../assets/img/mas.png);
+                }
+                &:not(.collapsed):after{
+                    background-image: url(../assets/img/menos.png);
+                }
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,62 @@
+@media (max-width: 768px) {
+    .grid-container {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-rows: 10% auto 5%;
+        grid-template-areas:
+        "head head"
+        "main main"
+        "foot foot";
+    }
+    /*header*/
+    .head {
+        li {
+            color: black;
+            a {
+                color: #c69749;
+                text-decoration: none;
+                font-size: 1rem;
+            }
+        }
+    }
+    .navegador-base{
+        display: none;
+    }
+    /*hamburguesa*/
+    .boots-drop {
+        display: flex;
+        margin-left: .625rem;
+    }
+    /*fleet*/
+    .section-fleet {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-start: 1;
+        grid-column-end: 2;
+        a {
+            font-size: 1.5rem;
+        }
+    }
+    /*form*/
+    .form-box {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        padding: 0 1.25rem 0 1.25rem;
+    }
+    /*faqs*/
+    .main-faqs {
+        grid-column-start: 1;
+        grid-column-end: 3;    
+    }
+    /*car*/
+    .section-car{
+        h1 {
+            font-size: 3.5rem;
+        }
+        h2 {
+            font-size: 3rem;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.section-principal {
+    text-align: center;
+    color: #c69749;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    h1 {
+        margin: 1rem;
+        font-size: 10rem;
+        font-style: italic;
+    }
+    p {
+        font-size: 5rem;
+    }
+}
+.section-about{
+    margin-top: 6.25rem;
+    text-align: center;
+    color: #c69749;
+    h2{
+        font-size: 5rem;
+        font-family: $font-general;
+    }
+    p {
+        margin: 2rem;
+        font-size: 1.5rem;
+        font-family: $font-general;
+    }
+}

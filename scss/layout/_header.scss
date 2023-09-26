@@ -1,0 +1,48 @@
+.base {
+    grid-area: main;
+    background-color: #282a3a;
+}
+.head {
+    background-image: url(../assets/img/head.jpg);
+    background-size: cover;
+    background-position: 50% 54%;
+    grid-area: head;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    font-family: "Roboto Mono", monospace;
+        ul{
+            padding-left: 0;
+            li{
+                list-style-type: none;
+                a{
+                    color: #c69749;
+                    text-decoration: none;
+                    font-size: 1.25rem;
+                    &:hover{
+                        background-color: black;
+                        margin: 1rem;
+                    }
+                }
+            }
+        }
+}
+/*hamburguesa*/
+.boots-drop{
+    display: none;
+    background-color: #c69749;
+    .boots-droped{
+        background-color: #c69749;
+        .boots-droped-li{
+            p{
+                color: black;
+                font-size: 1.25rem;
+                font-family: "Roboto Mono", monospace;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
