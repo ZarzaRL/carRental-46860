@@ -21,7 +21,7 @@
 .head {
   background-image: url(../assets/img/head.jpg);
   background-size: cover;
-  background-position: 50% 54%;
+  background-position: 0% 54%;
   grid-area: head;
   display: flex;
   flex-direction: column;
@@ -39,6 +39,7 @@
   color: #c69749;
   text-decoration: none;
   font-size: 1.25rem;
+  transition: 100ms;
 }
 .head ul li a:hover {
   background-color: black;
@@ -50,10 +51,11 @@
   display: none;
   background-color: #c69749;
 }
-.boots-drop .boots-droped {
+
+.boots-droped {
   background-color: #c69749;
 }
-.boots-drop .boots-droped .boots-droped-li p {
+.boots-droped .boots-droped-li p {
   color: black;
   font-size: 1.25rem;
   font-family: "Roboto Mono", monospace;
@@ -61,6 +63,35 @@
   padding: 0;
 }
 
+.animacionHeader {
+  background-position: 0% 54%;
+  animation-name: aparicion_header;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+
+@keyframes aparicion_header {
+  0% {
+    background-position: 0% 0%;
+  }
+  10% {
+    background-position: 0% 10%;
+  }
+  25% {
+    background-position: 0% 20%;
+  }
+  50% {
+    background-position: 0% 30%;
+  }
+  75% {
+    background-position: 0% 40%;
+  }
+  100% {
+    background-position: 0% 54%;
+  }
+}
 .pie {
   grid-area: foot;
   display: flex;
@@ -195,19 +226,24 @@
 }
 
 .section-fleet {
-  margin: 1rem;
+  margin: 4.375rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 4.375rem;
 }
 .section-fleet div {
   text-align: center;
   display: flex;
   flex-direction: column;
+  transition: all 150ms;
+}
+.section-fleet div:hover {
+  transform: scale(1.05);
 }
 .section-fleet div img {
-  width: 75%;
+  width: 100%;
   box-shadow: 1px 1px 1.875rem rgba(0, 0, 0, 0.685);
+  transition: all 70ms;
 }
 .section-fleet div img:hover {
   box-shadow: 0.3125rem 0.3125rem 2.5rem black;
@@ -278,6 +314,8 @@
     grid-template-columns: repeat(2, 1fr);
     grid-column-start: 1;
     grid-column-end: 2;
+    margin: 3.125rem;
+    gap: 3.125rem;
   }
   .section-fleet a {
     font-size: 1.5rem;
@@ -327,6 +365,8 @@
   .section-fleet {
     grid-template-columns: 1fr;
     grid-column-start: 2;
+    margin: 1.875rem;
+    gap: 1.875rem;
   }
   .section-fleet a {
     font-size: 1.2rem;

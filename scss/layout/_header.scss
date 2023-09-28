@@ -5,7 +5,7 @@
 .head {
     background-image: url(../assets/img/head.jpg);
     background-size: cover;
-    background-position: 50% 54%;
+    background-position: 0% 54%;
     grid-area: head;
     display: flex;
     flex-direction: column;
@@ -20,6 +20,7 @@
                     color: #c69749;
                     text-decoration: none;
                     font-size: 1.25rem;
+                    transition: 100ms;
                     &:hover{
                         background-color: black;
                         margin: 1rem;
@@ -32,17 +33,45 @@
 .boots-drop{
     display: none;
     background-color: #c69749;
-    .boots-droped{
-        background-color: #c69749;
-        .boots-droped-li{
-            p{
-                color: black;
-                font-size: 1.25rem;
-                font-family: "Roboto Mono", monospace;
-                margin: 0;
-                padding: 0;
-            }
+}
+.boots-droped{
+    background-color: #c69749;
+    .boots-droped-li{
+        p{
+            color: black;
+            font-size: 1.25rem;
+            font-family: "Roboto Mono", monospace;
+            margin: 0;
+            padding: 0;
         }
     }
 }
 
+.animacionHeader {
+    background-position: 0% 54%;
+    animation-name: aparicion_header;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+@keyframes aparicion_header{
+    0%{
+        background-position: 0% 0%;
+    }
+    10%{
+        background-position: 0% 10%;
+    }
+    25%{
+        background-position: 0% 20%;
+    }
+    50%{
+        background-position: 0% 30%;
+    }
+    75%{
+        background-position: 0% 40%;
+    }
+    100%{
+        background-position: 0% 54%;
+    }
+}

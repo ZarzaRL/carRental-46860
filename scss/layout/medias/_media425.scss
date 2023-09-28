@@ -25,6 +25,8 @@
     .section-fleet {
         grid-template-columns: 1fr;
         grid-column-start: 2;
+        margin: 1.875rem;
+        gap: 1.875rem;
         a{
             font-size: 1.2rem;
         }
