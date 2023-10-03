@@ -1,9 +1,5 @@
 @media (max-width: 425px) {
     .grid-container {
-        display: grid;
-        width: 100%;
-        height: 100vh;
-        grid-template-rows: 10% auto 5%;
         grid-template-areas:
         "head"
         "main"
@@ -23,18 +19,18 @@
     }
     /*fleet*/
     .section-fleet {
-        grid-template-columns: 1fr;
-        grid-column-start: 2;
-        margin: 1.875rem;
-        gap: 1.875rem;
+        @include grids_responsive(1fr,1,1,1.875rem,1.875rem);
         a{
             font-size: 1.2rem;
         }
     }
     /*form*/
+
     .form-box {
-        grid-template-columns: 1fr;
-        grid-column-end: 1;
+        @include grids_responsive(1fr,1,1,none,none);
+        h1{
+            grid-column-end: 1;
+        }
     }
     /*car*/
     .section-car {
@@ -47,6 +43,6 @@
     }
     /*faqs*/
     .main-faqs {
-        grid-column-end: 1;
+        @include grids_responsive(none,1,1,none,none);
     }
 }

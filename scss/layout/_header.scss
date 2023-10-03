@@ -11,7 +11,7 @@
     flex-direction: column;
     align-items: left;
     justify-content: center;
-    font-family: "Roboto Mono", monospace;
+    font-family: $font-head_foot;
         ul{
             padding-left: 0;
             li{
@@ -40,7 +40,7 @@
         p{
             color: black;
             font-size: 1.25rem;
-            font-family: "Roboto Mono", monospace;
+            font-family: $font-head_foot;
             margin: 0;
             padding: 0;
         }
@@ -52,7 +52,7 @@
     animation-name: aparicion_header;
     animation-iteration-count: 1;
     animation-timing-function: linear;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-delay: 0s;
 }
 @keyframes aparicion_header{

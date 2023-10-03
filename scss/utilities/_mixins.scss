@@ -1,0 +1,15 @@
+@mixin font($size,$family,$align,$color,$style){
+    font-size: $size;
+    font-family: $family;
+    text-align: $align;
+    color: $color;
+    font-style: $style;
+}
+@mixin grids_responsive($columnas,$inicia,$termina,$margenes,$separacion) {
+    display: grid;
+    grid-template-columns: $columnas;
+    grid-column-start: $inicia;
+    grid-column-end: $termina;
+    margin: $margenes;
+    gap: $separacion;
+}

@@ -1,8 +1,8 @@
+h1{
+    @include font(4.375rem,$font-titulos,center,#c69749,none);
+}
 .section-fleet {
-    margin: 4.375rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4.375rem;
+    @include grids_responsive(repeat(3, 1fr),1,4,4.375rem,4.375rem);
     div{
         text-align: center;
         display: flex;
@@ -13,7 +13,7 @@
         }
         img {
             width: 100%;
-            box-shadow: 1px 1px 1.875rem rgba(0, 0, 0, 0.685);
+            box-shadow: .0625rem .0625rem 1.875rem rgba(0, 0, 0, 0.685);
             transition: all 70ms;
             &:hover{
                 box-shadow: 0.3125rem 0.3125rem 2.5rem black;

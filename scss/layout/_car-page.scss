@@ -9,9 +9,7 @@
         color: #c69749;
         width: 75%;
         h1{
-            font-size: 4.375rem;
-            color: #c69749;
-            text-align: center;
+            @include font(4.375rem,$font-titulos,center,#c69749,none);
         }
         img{
             width: 100%;
@@ -23,6 +21,9 @@
         }
         p{
             font-size: 1.25rem;
+        }
+        h3{
+            text-align: right;
         }
     }
 }

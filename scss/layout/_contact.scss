@@ -2,10 +2,14 @@
     display: grid;
     grid-template-columns: 1% auto 1%;
     grid-column-start: 2;
-    .formulario{
+    h1{
+        @include font(4.375rem,$font-titulos,center,#c69749,none);
         grid-column-start: 2;
+    }
+    .formulario{
+        grid-column-start: 1;
+        grid-column-end: 4;
         background-color: black;
-        margin-top: 1.25rem;
         height: 23.75rem;
         width: 100%;
         padding: 1rem;

@@ -68,7 +68,7 @@
   animation-name: aparicion_header;
   animation-iteration-count: 1;
   animation-timing-function: linear;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-delay: 0s;
 }
 
@@ -96,13 +96,14 @@
   grid-area: foot;
   display: flex;
   background-color: #0a0e0f;
-  color: white;
-  text-align: center;
   justify-content: space-between;
   padding: 0 1.5rem 0 1.5rem;
   align-items: center;
   font-size: 1.25rem;
   font-family: "Roboto Mono", monospace;
+  text-align: center;
+  color: white;
+  font-style: none;
 }
 .pie a {
   text-decoration: none;
@@ -129,8 +130,10 @@
 }
 .main-car .section-car h1 {
   font-size: 4.375rem;
-  color: #c69749;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
+  color: #c69749;
+  font-style: none;
 }
 .main-car .section-car img {
   width: 100%;
@@ -143,16 +146,27 @@
 .main-car .section-car p {
   font-size: 1.25rem;
 }
+.main-car .section-car h3 {
+  text-align: right;
+}
 
 .form-box {
   display: grid;
   grid-template-columns: 1% auto 1%;
   grid-column-start: 2;
 }
-.form-box .formulario {
+.form-box h1 {
+  font-size: 4.375rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  color: #c69749;
+  font-style: none;
   grid-column-start: 2;
+}
+.form-box .formulario {
+  grid-column-start: 1;
+  grid-column-end: 4;
   background-color: black;
-  margin-top: 1.25rem;
   height: 23.75rem;
   width: 100%;
   padding: 1rem;
@@ -180,9 +194,12 @@
 }
 
 .main-faqs {
+  display: grid;
+  grid-template-columns: none;
   grid-column-start: 1;
   grid-column-end: 4;
   margin: 1.25rem;
+  gap: none;
 }
 .main-faqs .section-faqs {
   display: flex;
@@ -191,8 +208,10 @@
 }
 .main-faqs .section-faqs h1 {
   font-size: 4.375rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   color: #c69749;
+  font-style: none;
   margin: 15px 0 0 0;
   grid-column-start: 2;
 }
@@ -206,29 +225,33 @@
   border: solid black;
   color: black;
 }
-.main-faqs .section-faqs .accordion-item .accordion-button {
+.main-faqs .section-faqs .accordion-item .accordion-button, .main-faqs .section-faqs .accordion-item .accordion-button:not(.collapsed) {
   background-color: #735f32;
   border: solid black;
   font-family: "Josefin Sans", sans-serif;
   color: black;
 }
-.main-faqs .section-faqs .accordion-item .accordion-button:not(.collapsed) {
-  background-color: #735f32;
-  border: solid black;
-  font-family: "Josefin Sans", sans-serif;
-  color: black;
-}
-.main-faqs .section-faqs .accordion-item .accordion-button::after {
+.main-faqs .section-faqs .accordion-item .accordion-button::after, .main-faqs .section-faqs .accordion-item .accordion-button:not(.collapsed)::after {
   background-image: url(../assets/img/mas.png);
 }
 .main-faqs .section-faqs .accordion-item .accordion-button:not(.collapsed):after {
   background-image: url(../assets/img/menos.png);
 }
 
+h1 {
+  font-size: 4.375rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  color: #c69749;
+  font-style: none;
+}
+
 .section-fleet {
-  margin: 4.375rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin: 4.375rem;
   gap: 4.375rem;
 }
 .section-fleet div {
@@ -242,7 +265,7 @@
 }
 .section-fleet div img {
   width: 100%;
-  box-shadow: 1px 1px 1.875rem rgba(0, 0, 0, 0.685);
+  box-shadow: 0.0625rem 0.0625rem 1.875rem rgba(0, 0, 0, 0.685);
   transition: all 70ms;
 }
 .section-fleet div img:hover {
@@ -256,23 +279,29 @@
 }
 
 .section-principal {
-  text-align: center;
-  color: #c69749;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 100%;
 }
 .section-principal h1 {
-  margin: 1rem;
   font-size: 10rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  color: #c69749;
   font-style: italic;
+  margin: 1rem;
 }
 .section-principal p {
   font-size: 5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  color: #c69749;
+  font-style: none;
 }
 
 .section-about {
-  margin-top: 6.25rem;
+  margin-top: 3.125rem;
   text-align: center;
   color: #c69749;
+  width: 100%;
 }
 .section-about h2 {
   font-size: 5rem;
@@ -286,9 +315,6 @@
 
 @media (max-width: 768px) {
   .grid-container {
-    display: grid;
-    width: 100%;
-    height: 100vh;
     grid-template-rows: 10% auto 5%;
     grid-template-areas: "head head" "main main" "foot foot";
   }
@@ -311,9 +337,10 @@
   }
   /*fleet*/
   .section-fleet {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 3;
     margin: 3.125rem;
     gap: 3.125rem;
   }
@@ -323,15 +350,25 @@
   /*form*/
   .form-box {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-column-start: 1;
     grid-column-end: 3;
+    margin: none;
+    gap: none;
     padding: 0 1.25rem 0 1.25rem;
+  }
+  .form-box h1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
   /*faqs*/
   .main-faqs {
+    display: grid;
+    grid-template-columns: none;
     grid-column-start: 1;
     grid-column-end: 3;
+    margin: none;
+    gap: none;
   }
   /*car*/
   .section-car h1 {
@@ -343,10 +380,6 @@
 }
 @media (max-width: 425px) {
   .grid-container {
-    display: grid;
-    width: 100%;
-    height: 100vh;
-    grid-template-rows: 10% auto 5%;
     grid-template-areas: "head" "main" "foot";
   }
   /*header*/
@@ -363,8 +396,10 @@
   }
   /*fleet*/
   .section-fleet {
+    display: grid;
     grid-template-columns: 1fr;
-    grid-column-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
     margin: 1.875rem;
     gap: 1.875rem;
   }
@@ -373,7 +408,14 @@
   }
   /*form*/
   .form-box {
+    display: grid;
     grid-template-columns: 1fr;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    margin: none;
+    gap: none;
+  }
+  .form-box h1 {
     grid-column-end: 1;
   }
   /*car*/
@@ -385,7 +427,12 @@
   }
   /*faqs*/
   .main-faqs {
+    display: grid;
+    grid-template-columns: none;
+    grid-column-start: 1;
     grid-column-end: 1;
+    margin: none;
+    gap: none;
   }
 }
 
