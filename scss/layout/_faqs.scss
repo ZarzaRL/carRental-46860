@@ -19,12 +19,10 @@
                 color: black;
             }
             .accordion-button{
+                @extend .accordion-body;
                 background-color: #735f32;
-                border:solid black;
-                font-family: $font-general;
-                color: black;
                 &:not(.collapsed){
-                    @extend .accordion-button
+                    @extend .accordion-button;
                 }
                 &::after{
                     background-image: url(../assets/img/mas.png);

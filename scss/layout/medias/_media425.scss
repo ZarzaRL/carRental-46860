@@ -17,6 +17,10 @@
         justify-content: center;
         font-family: "Roboto Mono", monospace;
     }
+    /*index*/
+    .main-index{
+        @include grids_responsive(none,1,1,none,none);
+    }
     /*fleet*/
     .section-fleet {
         @include grids_responsive(1fr,1,1,1.875rem,1.875rem);

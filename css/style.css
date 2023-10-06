@@ -218,7 +218,7 @@
 .main-faqs .section-faqs .accordion-item {
   background-color: #282a3a;
 }
-.main-faqs .section-faqs .accordion-item .accordion-body {
+.main-faqs .section-faqs .accordion-item .accordion-body, .main-faqs .section-faqs .accordion-item .accordion-button, .main-faqs .section-faqs .accordion-item .accordion-button:not(.collapsed) {
   background-color: #c69749;
   max-width: 100%;
   font-family: "Josefin Sans", sans-serif;
@@ -227,9 +227,6 @@
 }
 .main-faqs .section-faqs .accordion-item .accordion-button, .main-faqs .section-faqs .accordion-item .accordion-button:not(.collapsed) {
   background-color: #735f32;
-  border: solid black;
-  font-family: "Josefin Sans", sans-serif;
-  color: black;
 }
 .main-faqs .section-faqs .accordion-item .accordion-button::after, .main-faqs .section-faqs .accordion-item .accordion-button:not(.collapsed)::after {
   background-image: url(../assets/img/mas.png);
@@ -278,10 +275,15 @@ h1 {
   font-size: 1.857rem;
 }
 
-.section-principal {
-  width: 100%;
+.main-index {
+  display: grid;
+  grid-template-columns: none;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin: none;
+  gap: none;
 }
-.section-principal h1 {
+.main-index h1 {
   font-size: 10rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
@@ -289,28 +291,28 @@ h1 {
   font-style: italic;
   margin: 1rem;
 }
-.section-principal p {
+.main-index h2 {
   font-size: 5rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   color: #c69749;
   font-style: none;
 }
-
-.section-about {
-  margin-top: 3.125rem;
-  text-align: center;
-  color: #c69749;
-  width: 100%;
-}
-.section-about h2 {
+.main-index h3 {
   font-size: 5rem;
   font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  color: #c69749;
+  font-style: none;
+  margin: 50px;
 }
-.section-about p {
-  margin: 2rem;
+.main-index p {
   font-size: 1.5rem;
   font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  color: #c69749;
+  font-style: none;
+  padding: 0 2rem 0 2rem;
 }
 
 @media (max-width: 768px) {
@@ -334,6 +336,15 @@ h1 {
   .boots-drop {
     display: flex;
     margin-left: 0.625rem;
+  }
+  /*index*/
+  .main-index {
+    display: grid;
+    grid-template-columns: none;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: none;
+    gap: none;
   }
   /*fleet*/
   .section-fleet {
@@ -393,6 +404,15 @@ h1 {
     align-items: left;
     justify-content: center;
     font-family: "Roboto Mono", monospace;
+  }
+  /*index*/
+  .main-index {
+    display: grid;
+    grid-template-columns: none;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    margin: none;
+    gap: none;
   }
   /*fleet*/
   .section-fleet {

@@ -1,25 +1,18 @@
-.section-principal {
-    width: 100%;
+.main-index {
+    @include grids_responsive(none,1,4,none,none);
     h1 {
         @include font(10rem,$font-titulos,center,#c69749,italic);
         margin: 1rem;
     }
-    p {
+    h2 {
         @include font(5rem,$font-titulos,center,#c69749,none);
     }
-}
-.section-about{
-    margin-top: 3.125rem;
-    text-align: center;
-    color: #c69749;
-    width: 100%;
-    h2{
-        font-size: 5rem;
-        font-family: $font-general;
+    h3{
+        @include font(5rem,$font-general,center,#c69749,none);
+        margin: 50px;
     }
     p {
-        margin: 2rem;
-        font-size: 1.5rem;
-        font-family: $font-general;
+        @include font(1.5rem,$font-general,center,#c69749,none);
+        padding: 0 2rem 0 2rem;
     }
 }
