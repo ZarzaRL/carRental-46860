@@ -28,6 +28,7 @@
     /*index*/
     .main-index{
         @include grids_responsive(none,1,3,none,none);
+        
     }
     /*fleet*/
     .section-fleet {

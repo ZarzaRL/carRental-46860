@@ -1,18 +1,19 @@
 .main-index {
-    @include grids_responsive(none,1,4,none,none);
-    h1 {
-        @include font(10rem,$font-titulos,center,#c69749,italic);
-        margin: 1rem;
-    }
-    h2 {
-        @include font(5rem,$font-titulos,center,#c69749,none);
-    }
-    h3{
-        @include font(5rem,$font-general,center,#c69749,none);
-        margin: 50px;
-    }
-    p {
-        @include font(1.5rem,$font-general,center,#c69749,none);
-        padding: 0 2rem 0 2rem;
-    }
+    @include grids_responsive(3,1,4,none,none);
+h1 {
+    @include font(10rem,$font-titulos,center,#c69749,italic);
+    margin: 1rem;
+    
+}
+h2 {
+    @include font(5rem,$font-titulos,center,#c69749,none);
+}
+h3{
+    @include font(5rem,$font-general,center,#c69749,none);
+    margin: 3.125rem;
+}
+p {
+    @include font(1.5rem,$font-general,center,#c69749,none);
+    padding: 0 2rem 0 2rem;
+}
 }

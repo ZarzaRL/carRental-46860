@@ -3,7 +3,7 @@
     display: flex;
     background-color: #0a0e0f;
     justify-content: space-between;
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 24px 0 24px;
     align-items: center;
     @include font(1.25rem,$font-head_foot,center,white,none);
     a{
