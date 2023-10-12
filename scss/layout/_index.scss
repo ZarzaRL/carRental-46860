@@ -1,5 +1,9 @@
 .main-index {
-    @include grids_responsive(3,1,4,none,none);
+    @include grids_responsive(repeat(3,1fr),1,4,none,none);
+    .section-index{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
 h1 {
     @include font(10rem,$font-titulos,center,#c69749,italic);
     margin: 1rem;

@@ -277,14 +277,15 @@ h1 {
 
 .main-index {
   display: grid;
-  grid-template-columns: 3;
+  grid-template-columns: repeat(3, 1fr);
   grid-column-start: 1;
   grid-column-end: 4;
   margin: none;
   gap: none;
 }
-.main-index .div-index {
-  width: 100%;
+.main-index .section-index {
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 .main-index h1 {
   font-size: 10rem;
@@ -343,11 +344,22 @@ h1 {
   /*index*/
   .main-index {
     display: grid;
-    grid-template-columns: none;
+    grid-template-columns: 1fr 1fr;
     grid-column-start: 1;
     grid-column-end: 3;
     margin: none;
     gap: none;
+  }
+  .main-index .section-index {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .main-index h1 {
+    font-size: 7rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: #c69749;
+    font-style: italic;
   }
   /*fleet*/
   .section-fleet {
@@ -399,11 +411,14 @@ h1 {
   /*index*/
   .main-index {
     display: grid;
-    grid-template-columns: none;
+    grid-template-columns: 1fr;
     grid-column-start: 1;
     grid-column-end: 1;
     margin: none;
     gap: none;
+  }
+  .main-index .section-index {
+    grid-column-end: 1;
   }
   /*fleet*/
   .section-fleet {

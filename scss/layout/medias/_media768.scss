@@ -27,8 +27,14 @@
     }
     /*index*/
     .main-index{
-        @include grids_responsive(none,1,3,none,none);
-        
+        @include grids_responsive(1fr 1fr,1,3,none,none);
+        .section-index{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        h1{
+            @include font(7rem,$font-titulos,center,#c69749,italic);
+        }
     }
     /*fleet*/
     .section-fleet {

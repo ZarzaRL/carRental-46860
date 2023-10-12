@@ -7,7 +7,10 @@
     }
     /*index*/
     .main-index{
-        @include grids_responsive(none,1,1,none,none);
+        @include grids_responsive(1fr,1,1,none,none);
+        .section-index{
+            grid-column-end: 1;
+        }
     }
     /*fleet*/
     .section-fleet {
