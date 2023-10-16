@@ -1,6 +1,7 @@
 .base {
     grid-area: main;
-    background-color: #282a3a;
+    background-image: url(../assets/img/fondo.jpg);
+    background-size: cover;
 }
 .head {
     background-image: url(../assets/img/head.jpg);

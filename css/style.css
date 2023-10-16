@@ -15,7 +15,8 @@
 
 .base {
   grid-area: main;
-  background-color: #282a3a;
+  background-image: url(../assets/img/fondo.jpg);
+  background-size: cover;
 }
 
 .head {
@@ -120,6 +121,17 @@
   display: flex;
   justify-content: center;
 }
+.main-car .goback a {
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: none;
+  color: #c69749;
+  font-style: none;
+}
+.main-car .goback a img {
+  width: 32px;
+}
 .main-car .section-car {
   display: flex;
   margin: 1.25rem 0 1.25rem 0;
@@ -144,7 +156,7 @@
   font-size: 3.125rem;
 }
 .main-car .section-car p {
-  font-size: 1.25rem;
+  font-size: 1.5625rem;
 }
 .main-car .section-car h3 {
   text-align: right;
@@ -446,7 +458,7 @@ h1 {
   }
   /*car*/
   .section-car h1 {
-    font-size: 2.5rem;
+    font-size: 1rem;
   }
   .section-car h2 {
     font-size: 2rem;

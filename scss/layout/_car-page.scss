@@ -1,6 +1,15 @@
 .main-car{
     display: flex;
     justify-content: center;
+    .goback{
+        a{
+            text-decoration: none;
+            @include font(1.25rem,$font-general,none,#c69749,none);
+            img{
+                width: 32px;
+            }
+        }
+    }
     .section-car{
         display: flex;
         margin: 1.25rem 0 1.25rem 0;
@@ -20,7 +29,7 @@
             font-size: 3.125rem;
         }
         p{
-            font-size: 1.25rem;
+            font-size: 1.5625rem;
         }
         h3{
             text-align: right;
