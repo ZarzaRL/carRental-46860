@@ -5,8 +5,12 @@
         a{
             text-decoration: none;
             @include font(1.25rem,$font-general,none,#c69749,none);
+            &:hover{
+                text-shadow: .25rem .25rem .125rem black;
+            }
             img{
                 width: 32px;
+                height: 100%;
             }
         }
     }

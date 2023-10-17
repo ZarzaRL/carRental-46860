@@ -129,8 +129,12 @@
   color: #c69749;
   font-style: none;
 }
+.main-car .goback a:hover {
+  text-shadow: 0.25rem 0.25rem 0.125rem black;
+}
 .main-car .goback a img {
   width: 32px;
+  height: 100%;
 }
 .main-car .section-car {
   display: flex;
